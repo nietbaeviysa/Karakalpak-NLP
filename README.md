@@ -17,3 +17,6 @@ This repository is dedicated to creating structured NLP datasets, preprocessing 
 2. **Data Extraction & OCR:** Extract text from PDFs and perform OCR where necessary.
 3. **Preprocessing:** Text normalization, cleaning, and formatting.
 4. **Tokenizer & Baseline Models:** Train custom tokenizers and build baseline NLP tools.
+## Dataset
+Published on Hugging Face:
+huggingface.co/datasets/nietbaeviysa/karakalpak-dastan-corpus
