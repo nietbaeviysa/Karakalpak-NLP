@@ -20,3 +20,9 @@ This repository is dedicated to creating structured NLP datasets, preprocessing 
 ## Dataset
 Published on Hugging Face:
 huggingface.co/datasets/nietbaeviysa/karakalpak-dastan-corpus
+## Datasets
+Published on Hugging Face — 11 downloads in first 24 hours:
+https://huggingface.co/datasets/nietbaeviysa/karakalpak-dastan-corpus
+
+- karakalpak_vocabulary.csv — 17,293 unique words
+- karakalpak_sentiment_lexicon.csv — sentiment annotations
