@@ -30,3 +30,12 @@ https://huggingface.co/datasets/nietbaeviysa/karakalpak-dastan-corpus
 ## Published Datasets
 - Hugging Face: huggingface.co/datasets/nietbaeviysa/karakalpak-dastan-corpus
 - Kaggle: kaggle.com/datasets/nietbaeviysa/karakalpak-dastan-corpus
+
+- ## Notebooks
+- `frequency_analysis.ipynb` — frequency analysis, 17,293 unique words
+- `sentiment_analysis.ipynb` — sentiment analysis of 3 dastans
+
+## Key Findings
+- Qiriq Qiz: most positive dastan (2.9% positive, 0.9% negative)
+- Qoblan: balanced (2.6% positive, 1.2% negative)  
+- Er Ziyar: darkest dastan (2.4% positive, 1.3% negative)
