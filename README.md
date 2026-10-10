@@ -26,3 +26,7 @@ https://huggingface.co/datasets/nietbaeviysa/karakalpak-dastan-corpus
 
 - karakalpak_vocabulary.csv — 17,293 unique words
 - karakalpak_sentiment_lexicon.csv — sentiment annotations
+
+## Published Datasets
+- Hugging Face: huggingface.co/datasets/nietbaeviysa/karakalpak-dastan-corpus
+- Kaggle: kaggle.com/datasets/nietbaeviysa/karakalpak-dastan-corpus
