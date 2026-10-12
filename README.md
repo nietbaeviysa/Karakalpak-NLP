@@ -39,3 +39,6 @@ https://huggingface.co/datasets/nietbaeviysa/karakalpak-dastan-corpus
 - Qiriq Qiz: most positive dastan (2.9% positive, 0.9% negative)
 - Qoblan: balanced (2.6% positive, 1.2% negative)  
 - Er Ziyar: darkest dastan (2.4% positive, 1.3% negative)
+
+- karakalpak-dictionary v3.0 — search in both Cyrillic and Latin scripts
+  huggingface.co/spaces/nietbaeviysa/karakalpak-dictionary
