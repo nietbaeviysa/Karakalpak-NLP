@@ -20,10 +20,10 @@ Goal: build open, documented language resources and grow them into a research pa
 |---|---|---|
 | 1 | Word-frequency analysis of three dastans (*Qirq qiz*, *Qoblan*, *Er Ziyar*) | 17,293 unique words, CSV |
 | 2 | Sentiment lexicon (positive / negative / neutral per word) | `karakalpak_sentiment_lexicon.csv` |
-| 3 | Sentiment analysis of the dastans (lexicon-based) | *Qirq qiz* is the most positive (2.9%), *Er Ziyar* the darkest (1.3% negative words); see Limitations |
+| 3 | Sentiment analysis of the dastans (lexicon-based) | *Qirq qiz* is the most positive (2.9%), *Er Ziyar* the darkest (1.3% negative words); see [Limitations](#quality-and-limitations-read-this-before-using-any-numbers) |
 | 4 | Interactive web dictionary with examples from the dastans | live Space, works in Cyrillic and Latin |
 | 5 | Corpus extension from kaa.wikipedia.org | 52 documents, 937,525 characters, ~156,000 words |
-| 6 | **OCR pipeline for printed Karakalpak** (new) | one volume of an explanatory dictionary digitised, see below |
+| 6 | **OCR pipeline for printed Karakalpak** (new) | one volume of an explanatory dictionary digitised; [details below](#project-6-ocr-pipeline-for-printed-karakalpak) and in [docs/OCR_PIPELINE.md](docs/OCR_PIPELINE.md) |
 | 7 | Karakalpak vs Uzbek comparative analysis | planned |
 
 ## Project 6: OCR pipeline for printed Karakalpak
