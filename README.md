@@ -24,7 +24,8 @@ Goal: build open, documented language resources and grow them into a research pa
 | 4 | Interactive web dictionary with examples from the dastans | live Space, works in Cyrillic and Latin |
 | 5 | Corpus extension from kaa.wikipedia.org | 52 documents, 937,525 characters, ~156,000 words |
 | 6 | **OCR pipeline for printed Karakalpak** (new) | one volume of an explanatory dictionary digitised; [details below](#project-6-ocr-pipeline-for-printed-karakalpak) and in [docs/OCR_PIPELINE.md](docs/OCR_PIPELINE.md) |
-| 7 | Karakalpak vs Uzbek comparative analysis | planned |
+| 7 | **Folklore collection digitised** (*Qaraqalpaq folklori*, vols. 88-100, Nukus: Ilim, 2015), plain-text mode | 567 text pages, ~149,000 words, ~36,000 distinct word forms; proverbs, verse sayings, poets' contests, riddles, children's folklore; details in [Project 7](#project-7-folklore-collection) |
+| 8 | Karakalpak vs Uzbek comparative analysis | planned |
 
 ## Project 6: OCR pipeline for printed Karakalpak
 
@@ -58,6 +59,21 @@ Details, failure modes and lessons: [docs/OCR_PIPELINE.md](docs/OCR_PIPELINE.md)
 - The sentiment results (Project 3) come from a lexicon-based method without a gold-standard validation set. Treat the percentages as exploratory.
 - The dastan corpus is small and comes from three epic texts, so it is not representative of modern Karakalpak.
 
+## Project 7: Folklore collection
+
+A second source digitised with the same pipeline in plain-text mode: a multi-volume edition of Karakalpak folklore (small genres), 573 scanned pages. Each page keeps its printed page number and a genre label taken from the book's table of contents.
+
+| Measure | Value |
+|---|---|
+| Text pages | 567 (plus title, contents and imprint) |
+| Running text | ~149,000 words, ~36,000 distinct word forms (includes residual OCR noise) |
+| Genres | proverbs (4 thematic parts), verse sayings, reflective verse, poets' contests, riddles, tongue twisters, lullabies, children's word art and games |
+| Glossary | ~1,400 headword–explanation pairs extracted from the book's glossary of rare words |
+| Overlap with the dastan word list | ~60% of the tokens; ~78% of the distinct forms are new relative to the dastans |
+
+Post-processing: Latin letters that crept into Cyrillic words were repaired (about 620 words, logged), the letter ұ was normalised to у and һ to ҳ (the edition prints ұ; the dastan texts do not), and every change can be traced.
+Quality is checked on page samples only; see Limitations. Full text of the edition is not redistributed here.
+
 ## Data and licensing
 
 Source scans of printed books are not redistributed here. The repository contains code, methodology and aggregate statistics. Data derived from copyrighted publications is not published until the rights situation is clear. If you are a rights holder and have concerns, please contact me.
@@ -85,9 +101,10 @@ Never commit API keys; the scripts read the key from the environment.
 - [x] Dastan corpus, frequency lists, sentiment lexicon, interactive dictionary
 - [x] OCR pipeline and first dictionary volume
 - [ ] Manual evaluation of OCR quality on a random page sample
-- [ ] Remaining dictionary volumes and a folklore collection (plain-text mode)
+- [x] Folklore collection digitised (plain-text mode)
+- [ ] Remaining dictionary volumes
 - [ ] Merged lexicon with definitions; extended sentiment lexicon
-- [ ] Karakalpak vs Uzbek comparative analysis
+- [ ] Karakalpak vs Uzbek comparative analysis (Project 8)
 - [ ] Cyrillic–Latin transliteration tools and shared evaluation notes
 - [ ] Statistics fundamentals (Khan Academy) to support evaluation methodology
 
