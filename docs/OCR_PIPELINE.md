@@ -62,3 +62,11 @@ Automatic checks (counts of Latin fragments, headword counts against the text la
 ## 7. Rights
 
 The scans come from printed publications. Raw scans and full extracted text of copyrighted works are not published in this repository.
+
+
+## 8. Plain-text mode and the folklore edition: additional lessons
+
+- **Do not assume the orthography.** I first assumed that the letters ұ and һ do not belong to Karakalpak and nearly told the model never to output them. The folklore edition does print ұ (and rarely һ), so the model had transcribed correctly. The prompt was changed to "copy every printed letter exactly" and normalisation is done afterwards by explicit, logged rules, with the raw text kept next to the clean text.
+- **Script mixing is the main residual error** in plain-text mode: about 0.4% of words had Latin letters inside Cyrillic words (including the Latin schwa ə). These were repaired by a transliteration table applied only inside mixed-script words, choosing between candidate spellings by checking known words; every repair is logged for review. Only about half of the repaired words could be confirmed against the known word list, so this is a heuristic, not a guarantee.
+- **Blank or empty results** (14 of 573 pages) are listed for manual inspection instead of being assumed blank.
+- **Structure from the book itself:** the table of contents provides genre labels per page range; the printed page number returned by the model is used to place each page in a genre.
