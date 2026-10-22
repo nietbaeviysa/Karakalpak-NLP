@@ -56,7 +56,11 @@ Automatic checks (counts of Latin fragments, headword counts against the text la
 
 **Result, dictionary volume (best-of-two-runs version).** 15 random pages, 150 words, 6 wrong: 4.0% (95% interval 1.8-8.5%). None of the 15 pages needed a re-run. Caveats: small sample; the checked words are harder than average; the measure covers letter errors in the checked words and not lost entries.
 
-**Still to do.** The same evaluation for the folklore collection, and a larger sample for the dictionary.
+**Result, folklore collection (raw model output, before cleaning).** 15 random pages, 150 words, 10 wrong: 6.7% (95% interval 3.7-11.8%). None of the 15 pages was unusable. Spelling differences of ұ and һ were not counted as errors, since the edition prints them and they are normalised later by explicit rules.
+
+The two intervals overlap, so the data do not show that one book was read worse than the other.
+
+**Still to do.** Larger samples, and a re-measurement of the cleaned folklore corpus (the cleaning step repairs Latin letters inside Cyrillic words, so the real error rate after cleaning should be lower).
 
 ## 6. Known limitations
 
