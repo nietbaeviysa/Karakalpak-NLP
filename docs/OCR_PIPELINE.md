@@ -50,7 +50,13 @@ On a free API tier, with a lightweight model: about 1,600 input and 1,900 output
 
 ## 5. Evaluation
 
-Automatic checks (counts of Latin fragments, headword counts against the text layer, rare-spelling lists) only find some errors. Planned: a manual comparison on 15 random pages, about 150 words, counting words with wrong special letters, lost entries and merged or split entries, and reporting the share of incorrect words with the sampling procedure. Results will be added to the README.
+Automatic checks (counts of Latin fragments, headword counts against the text layer, rare-spelling lists) only find some errors, so quality is also measured by hand.
+
+**Procedure.** A review notebook shows the page image next to the recognised text. Pages are drawn at random (fixed seed) so the estimate is not biased by the automatic flags; the most suspicious pages are reviewed separately and never used for the estimate. On each page about 10 words (mostly words with Karakalpak-specific letters) are compared with the printed page. A page marked unusable counts as fully wrong. The share of wrong words is reported with a 95% Wilson interval.
+
+**Result, dictionary volume (best-of-two-runs version).** 15 random pages, 150 words, 6 wrong: 4.0% (95% interval 1.8-8.5%). None of the 15 pages needed a re-run. Caveats: small sample; the checked words are harder than average; the measure covers letter errors in the checked words and not lost entries.
+
+**Still to do.** The same evaluation for the folklore collection, and a larger sample for the dictionary.
 
 ## 6. Known limitations
 
