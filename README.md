@@ -24,7 +24,7 @@ Goal: build open, documented language resources and grow them into a research pa
 | 4 | Interactive web dictionary with examples from the dastans | live Space, works in Cyrillic and Latin |
 | 5 | Corpus extension from kaa.wikipedia.org | 52 documents, 937,525 characters, ~156,000 words |
 | 6 | **OCR pipeline for printed Karakalpak** (new) | one volume of an explanatory dictionary digitised; [details below](#project-6-ocr-pipeline-for-printed-karakalpak) and in [docs/OCR_PIPELINE.md](docs/OCR_PIPELINE.md) |
-| 7 | **Folklore collection digitised** (*Qaraqalpaq folklori*, vols. 88-100, Nukus: Ilim, 2015), plain-text mode | 567 text pages, ~149,000 words, ~36,000 distinct word forms; proverbs, verse sayings, poets' contests, riddles, children's folklore; details in [Project 7](#project-7-folklore-collection) |
+| 7 | **Folklore collection digitised** (*Qaraqalpaq folklori*, vols. 88-100, Nukus: Ilim, 2015), plain-text mode | 554 text pages, ~149,000 words, ~36,000 distinct word forms; proverbs, verse sayings, poets' contests, riddles, children's folklore; details in [Project 7](#project-7-folklore-collection) |
 | 8 | Karakalpak vs Uzbek comparative analysis | planned |
 
 ## Project 6: OCR pipeline for printed Karakalpak
@@ -41,6 +41,7 @@ First target: one volume (505 pages) of the *Explanatory Dictionary of the Karak
 | Usage examples with author attribution | ~3,200 |
 | Running text | ~114,000 tokens, ~34,000 distinct word forms (includes residual OCR noise) |
 | Cost | free API tier; ~1,600 input and ~1,900 output tokens per page |
+| Measured word accuracy | 96.0% of checked words correct (manual check of 150 words on 15 random pages; 95% interval 91.5-98.2%) |
 
 ### What the pipeline does
 
@@ -53,7 +54,8 @@ Details, failure modes and lessons: [docs/OCR_PIPELINE.md](docs/OCR_PIPELINE.md)
 
 ### Quality and limitations (read this before using any numbers)
 
-- **Not fully verified.** The output is machine-read. Errors found so far include wrong special letters (for example ғ read as р), occasional dropped entries and sentences, and Latin letters inside Cyrillic words. A systematic manual evaluation on a random page sample is in progress and its results will be published here.
+- **Not fully verified.** The output is machine-read. Errors found so far include wrong special letters (for example ғ read as р), occasional dropped entries and sentences, and Latin letters inside Cyrillic words. 
+- **Measured on a random sample.** 15 pages were drawn at random from the dictionary volume; on each, 10 words (mostly words with Karakalpak-specific letters, so harder than average text) were compared by the author with the printed page. 6 of 150 words were wrong: **4.0%** (95% Wilson interval 1.8-8.5%). None of the 15 pages was unusable. This measures letter-level errors on the checked words; it does not measure lost entries, which are caught only by the automatic checks. A few pages flagged by those checks (empty or garbled results) are re-processed.
 - Automatic letter correction only catches errors where the correct spelling is frequent; rare words can still be wrong.
 - Models sometimes "correct" printed spelling towards an expected form, so the output is not a diplomatic transcription.
 - The sentiment results (Project 3) come from a lexicon-based method without a gold-standard validation set. Treat the percentages as exploratory.
@@ -65,7 +67,7 @@ A second source digitised with the same pipeline in plain-text mode: a multi-vol
 
 | Measure | Value |
 |---|---|
-| Text pages | 567 (plus title, contents and imprint) |
+| Text pages | 554 (plus 13 image-only pages, title, contents and imprint) |
 | Running text | ~149,000 words, ~36,000 distinct word forms (includes residual OCR noise) |
 | Genres | proverbs (4 thematic parts), verse sayings, reflective verse, poets' contests, riddles, tongue twisters, lullabies, children's word art and games |
 | Glossary | ~1,400 headword–explanation pairs extracted from the book's glossary of rare words |
@@ -100,7 +102,7 @@ Never commit API keys; the scripts read the key from the environment.
 
 - [x] Dastan corpus, frequency lists, sentiment lexicon, interactive dictionary
 - [x] OCR pipeline and first dictionary volume
-- [ ] Manual evaluation of OCR quality on a random page sample
+- [x] Manual evaluation of OCR quality on a random page sample (dictionary volume); [ ] repeat for the folklore collection
 - [x] Folklore collection digitised (plain-text mode)
 - [ ] Remaining dictionary volumes
 - [ ] Merged lexicon with definitions; extended sentiment lexicon
