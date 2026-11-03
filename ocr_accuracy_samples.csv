@@ -1,0 +1,6 @@
+book,sample_pages,words_checked,words_wrong,error_rate_percent,ci95_low_percent,ci95_high_percent,stage
+vol1,15,150,23,15.3,10.4,22.0,"raw OCR before cleaning (includes one garbage page, p.140, later re-OCRed)"
+vol2,15,150,5,3.3,1.4,7.6,"as recorded by the author"
+vol5,15,150,10,6.7,3.7,11.8,"raw OCR before cleaning"
+vol7,15,150,6,4.0,1.8,8.5,"as recorded by the author"
+folklore,15,150,10,6.7,3.7,11.8,"raw OCR before cleaning"

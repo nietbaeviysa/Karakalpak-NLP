@@ -1,0 +1,9 @@
+volume,dictionary_pages,headword_entries,rows,word_tokens,distinct_spellings,notes
+vol1,380 (pp.20-399),2889,4463,86882,25516,"build after re-OCR of 4 pages; Latin etymology in parentheses kept"
+vol2,398 pages,~2770,,,,"approximate figures recorded by the author"
+vol3,396 (pp.4-399),4156,6306,102135,28720,"build after re-OCR of 3 pages"
+vol4,396 (pp.4-399),4215,6352,105972,28621,"build after re-OCR of 4 pages"
+vol7,505 pages,~6500,,~114000,~34000,"approximate figures recorded by the author"
+vol5,401 pages OCRed,,,,,"table not built yet"
+vol6,not started,,,,,
+folklore,573 pages (554 with text),,,~149000,~36000,"page-level text; 13 pages are images only"
