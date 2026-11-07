@@ -1,9 +1,9 @@
-volume,dictionary_pages,headword_entries,rows,word_tokens,distinct_spellings,notes
-vol1,380 (pp.20-399),2889,4463,86882,25516,"build after re-OCR of 4 pages; Latin etymology in parentheses kept"
-vol2,398 pages,~2770,,,,"approximate figures recorded by the author"
-vol3,396 (pp.4-399),4156,6306,102135,28720,"build after re-OCR of 3 pages"
-vol4,396 (pp.4-399),4215,6352,105972,28621,"build after re-OCR of 4 pages"
-vol7,505 pages,~6500,,~114000,~34000,"approximate figures recorded by the author"
-vol5,401 pages OCRed,,,,,"table not built yet"
-vol6,not started,,,,,
-folklore,573 pages (554 with text),,,~149000,~36000,"page-level text; 13 pages are images only"
+volume,letters,dictionary_pages,headword_entries,rows,word_tokens,distinct_spellings
+vol1,A-Б,380 (pp.20-399),2889,4463,86882,25516
+vol2,Б-Г,396 (pp.4-399),2768,4190,86908,25848
+vol3,Г-Ж,396 (pp.4-399),4156,6306,102135,28720
+vol4,З-Қ,396 (pp.4-399),4215,6352,105972,28621
+vol5,Қ-Ө,396 (pp.4-399),4813,6454,97933,29316
+vol6,П-С,396 (pp.4-399),3682,4815,107971,31400
+vol7,С-Я,500 (pp.4-503),6559,9025,123285,34346
+all,,,29082,41605,"~711000","~109000 (union across volumes)"
