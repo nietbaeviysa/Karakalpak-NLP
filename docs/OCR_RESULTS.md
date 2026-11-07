@@ -22,14 +22,18 @@ and the notebook `Karakalpak_OCR.ipynb`. See `docs/OCR_PIPELINE.md`.
 | Volume | Dictionary pages | Headword entries | Rows | Word tokens | Distinct spellings |
 |---|---|---|---|---|---|
 | 1 | 380 (pp. 20-399) | 2,889 | 4,463 | 86,882 | 25,516 |
-| 2 | 398 pages | ~2,770 | | | |
+| 2 | 396 (pp. 4-399) | 2,768 | 4,190 | 86,908 | 25,848 |
 | 3 | 396 (pp. 4-399) | 4,156 | 6,306 | 102,135 | 28,720 |
 | 4 | 396 (pp. 4-399) | 4,215 | 6,352 | 105,972 | 28,621 |
-| 7 | 505 pages | ~6,500 | | ~114,000 | ~34,000 |
+| 5 | 396 (pp. 4-399) | 4,813 | 6,454 | 97,933 | 29,316 |
+| 6 | 396 (pp. 4-399) | 3,682 | 4,815 | 107,971 | 31,400 |
+| 7 | 500 (pp. 4-503) | 6,559 | 9,025 | 123,285 | 34,346 |
+| **All** | | **29,082** | **41,605** | **~711,000** | **~109,000** (union) |
 
-Volumes 5 and 6 are in progress. Folklore: 573 pages (554 with text, 13 only images),
-about 149,000 words (about 36,000 distinct). "~" marks approximate figures.
-"Distinct spellings" counts different written forms, not lemmas.
+Folklore: 573 pages (554 with text, 13 only images), about 149,000 words (about 36,000
+distinct). "Distinct spellings" counts different written forms, not lemmas; the union
+across volumes is computed over all seven tables. Counts differ by well under 1% depending
+on the tokenizer.
 
 ## Accuracy (random sample, manual check)
 
@@ -42,11 +46,12 @@ usable.
 | Vol. 1 | 23 / 150 | 15.3% | 10.4-22.0% | raw OCR, before cleaning (includes one garbage page, since re-OCRed) |
 | Vol. 2 | 5 / 150 | 3.3% | 1.4-7.6% | as recorded |
 | Vol. 5 | 10 / 150 | 6.7% | 3.7-11.8% | raw OCR, before cleaning |
+| Vol. 6 | 26 / 150 | 17.3% | 12.1-24.2% | raw OCR before cleaning (includes one garbage page, since re-OCRed; 15 of the other 16 wrong words were Latin letters inside Cyrillic words) |
 | Vol. 7 | 6 / 150 | 4.0% | 1.8-8.5% | as recorded |
 | Folklore | 10 / 150 | 6.7% | 3.7-11.8% | raw OCR, before cleaning |
 
 Pages flagged as suspicious by the automatic report are **not** a quality measure; only
-the random sample is. Volumes 3, 4 and 6 have not been sampled yet.
+the random sample is. Volumes 3 and 4 have not been sampled yet, and no sample has been taken on the cleaned tables.
 
 ## Main error types
 
@@ -63,7 +68,7 @@ Letter-level counts of automatic corrections are in `ocr_letter_confusions.csv`
 
 1. OCR copies letters as printed; nothing is normalized inside the OCR step.
 2. Normalization is a separate step with explicit rules, a change log, and the raw text kept.
-3. Latin letters inside Cyrillic words are fixed by transliteration (heuristic, logged).
+3. Latin letters inside Cyrillic words are fixed by transliteration (heuristic, logged); a Latin letter that repeats the preceding Cyrillic vowel is dropped, and Latin "y" after a vowel becomes "й".
    Genuine Latin (for example etymology in parentheses) is left untouched.
 4. A rare spelling is replaced only if the variant with ғ/қ/ң/ү/ў/ә/ө/ҳ is much more
    frequent in the same text.
